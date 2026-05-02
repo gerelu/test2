@@ -20,7 +20,7 @@ ax.plot( data[:,0], data[:,1] )
 # plt.show()
 st.pyplot(fig)
 
-file2="phipmm.txt"
+file2="phiPMM.txt"
 data=np.loadtxt(file2)
 st.write(data)
 
