@@ -16,13 +16,10 @@ fig=plt.figure(figsize=(9,9))
 ax=fig.add_subplot(projection="3d")
 
 
-
 file="phiPMM.npy"
 nang=97
 nc=100
 
-
-st.write(file)
 
 data=np.load(file)
 
