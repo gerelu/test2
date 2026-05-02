@@ -20,6 +20,9 @@ ax.plot( data[:,0], data[:,1] )
 # plt.show()
 st.pyplot(fig)
 
+file2="phipmm.txt"
+data=np.loadtxt(file2)
+st.write(data)
 
 # st.sidebar.header("view setting")
 # elev=st.sidebar.slider("elev",0,90,30)
