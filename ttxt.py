@@ -17,7 +17,7 @@ def update_view():
     elif st.session_state.view_selection == "P-My":
         st.session_state.elev, st.session_state.azim = 0, 0
     elif st.session_state.view_selection == "Mx-My":
-        st.session_state.elev, st.session_state.azim = 90, 90
+        st.session_state.elev, st.session_state.azim = 90, 0
 
 # 當 Slider 被滑動時：解除 Pills 的選取
 def slider_change():
@@ -41,14 +41,14 @@ with col1:
 
 # orth=st.sidebar.checkbox("ortho")
 
-if view is not None:
-    # st.write(view)
-    if view=="P-Mx":
-        elev,azim=0,90
-    elif view=="P-My":
-        elev,azim=0,0
-    elif view=="Mx-My":
-        elev,azim=90,0
+# if view is not None:
+#     # st.write(view)
+#     if view=="P-Mx":
+#         elev,azim=0,90
+#     elif view=="P-My":
+#         elev,azim=0,0
+#     elif view=="Mx-My":
+#         elev,azim=90,0
 
 
 fig=plt.figure(figsize=(9,9))
