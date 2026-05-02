@@ -16,7 +16,7 @@ ax=fig.add_subplot(projection="3d")
 
 
 
-file="phipmm.npy"
+file="phipmm.txt"
 nang=97
 nc=100
 
@@ -25,7 +25,7 @@ base_path = Path(__file__).parent
 file_path = base_path / file
 st.write(file_path)
 
-data=np.load(file_path)
+data=np.loadtxt(file_path)
 
 
 x=data[:,0].reshape(nang, nc)
