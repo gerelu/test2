@@ -48,7 +48,7 @@ if view is not None:
     elif view=="P-My":
         elev,azim=0,0
     elif view=="Mx-My":
-        elev,azim=90,90
+        elev,azim=90,0
 
 
 fig=plt.figure(figsize=(9,9))
