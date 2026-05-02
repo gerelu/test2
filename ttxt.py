@@ -5,8 +5,8 @@ import streamlit as st
 
 
 
-file2="phiPMM.npy"
-data=np.load(file2)
+# file2="phiPMM.npy"
+# data=np.load(file2)
 
 st.sidebar.header("view setting")
 elev=st.sidebar.slider("elev",0,90,30)
@@ -21,16 +21,16 @@ ax=fig.add_subplot(projection="3d")
 
 
 
-file="phipmm.txt"
+file="phiPMM.npy"
 nang=97
 nc=100
 
 # 取得目前py所在的絕對路徑
-base_path = Path(__file__).parent
-file_path = base_path / file
-st.write(file_path)
+# base_path = Path(__file__).parent
+# file_path = base_path / file
+st.write(file)
 
-data=np.loadtxt(file_path)
+data=np.load(file)
 
 
 x=data[:,0].reshape(nang, nc)
