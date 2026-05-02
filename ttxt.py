@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 
+st.title("PMM Interaction Surface")
 
-st.sidebar.header("view setting")
-elev=st.sidebar.slider("elev",0,90,30)
-azim=st.sidebar.slider("azim",0,360,40)
+col1 = st.columns(1, border=True)[0]
+with col1:
+    st.write("view setting")
+    elev=st.slider("仰角",0,90,20)
+    azim=st.slider("旋轉角",0,360,40)
 # orth=st.sidebar.checkbox("ortho")
 
-st.title("PMM Interaction Surface")
 
 
 fig=plt.figure(figsize=(9,9))
