@@ -1,12 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from pathlib import Path
 import streamlit as st
 
 
-
-# file2="phiPMM.npy"
-# data=np.load(file2)
 
 st.sidebar.header("view setting")
 elev=st.sidebar.slider("elev",0,90,30)
@@ -25,9 +21,7 @@ file="phiPMM.npy"
 nang=97
 nc=100
 
-# 取得目前py所在的絕對路徑
-# base_path = Path(__file__).parent
-# file_path = base_path / file
+
 st.write(file)
 
 data=np.load(file)
@@ -41,7 +35,7 @@ ax.plot_surface(x,y,z,alpha=0.2,edgecolor="gray",lw=0.3,cmap="Blues")
 ax.set_xlabel(r'$\phi \cdot M_{nx}$ (tf-m)')
 ax.set_ylabel(r'$\phi\cdot M_{ny}$ (tf-m)')
 ax.set_zlabel(r'$\phi\cdot P_n$ (tf)')
-ax.set_title('P-Mx-My Interaction Surface')
+ax.set_title('P-Mx-My Surface & loads ')
 ax.tick_params(labelsize=8)
 # ax.view_init(elev=0,azim=270)
 
