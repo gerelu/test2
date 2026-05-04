@@ -6,7 +6,7 @@ import streamlit as st
 if "elev" not in st.session_state:
     st.session_state.elev = 20
 if "azim" not in st.session_state:
-    st.session_state.azim = 40
+    st.session_state.azim = 120
 if "view_selection" not in st.session_state:
     st.session_state.view_selection = None
 
@@ -67,6 +67,11 @@ x=data[:,0].reshape(nang, nc)
 y=data[:,1].reshape(nang, nc)
 z=data[:,2].reshape(nang, nc)
 ax.plot_surface(x,y,z,alpha=0.2,edgecolor="gray",lw=0.3,cmap="Blues")
+
+ax.scatter3D(130*0.15, 130*0.08, 130, c="r")
+
+ax.text(25,15,135, "NG")
+
 
 ax.set_xlabel(r'$\phi \cdot M_{nx}$ (tf-m)')
 ax.set_ylabel(r'$\phi\cdot M_{ny}$ (tf-m)')
