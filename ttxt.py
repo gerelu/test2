@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -25,7 +26,11 @@ def slider_change():
     st.session_state.view_selection = None
 
 
-st.title("PMM Interaction Surface")
+st.title("PMM Surface Viewer")
+
+df=pd.DataFrame({"Pu":[130],"Mux":[130*0.08],"Muy":[130*0.15]})
+
+
 
 col1 = st.columns(1, border=True)[0]
 with col1:
@@ -68,7 +73,7 @@ y=data[:,1].reshape(nang, nc)
 z=data[:,2].reshape(nang, nc)
 ax.plot_surface(x,y,z,alpha=0.2,edgecolor="gray",lw=0.3,cmap="Blues")
 
-ax.scatter3D(130*0.15, 130*0.08, 130, c="r")
+ax.scatter3D(df.iloc[:,1], df.iloc[:,2], df.iloc[:,0], c="r")
 
 ax.text(25,15,135, "NG")
 
@@ -91,5 +96,7 @@ ax.view_init(elev,azim)
 
 
 
-
 st.pyplot(fig)
+
+st.write("#### 載重組合")
+st.dataframe(df)
