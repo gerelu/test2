@@ -73,9 +73,9 @@ y=data[:,1].reshape(nang, nc)
 z=data[:,2].reshape(nang, nc)
 ax.plot_surface(x,y,z,alpha=0.2,edgecolor="gray",lw=0.3,cmap="Blues")
 
-ax.scatter3D(df.iloc[:,1], df.iloc[:,2], df.iloc[:,0], c="r")
+ax.scatter3D(df.iloc[:,1], df.iloc[:,2], df.iloc[:,0], c="g")
 
-ax.text(25,15,135, "NG")
+ax.text(15,25,135, "OK")
 
 
 ax.set_xlabel(r'$\phi \cdot M_{nx}$ (tf-m)')
